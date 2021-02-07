@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main()
+{
+    int i,n,sum=0;
+    printf("Enter a number to check whether it is perfect number or not: ");
+    scanf("%d", &n);
+    printf("\nThe quotients of the %d numbers are: ", n);
+    for(i=2; i<=n; i++){
+        if((n%i)==0){
+            printf("%d ", n/i);
+            sum=sum+(n/i);
+        }
+    }
+    printf("\nThe sum of quotients is: %d", sum);
+    if(sum==n){
+        printf("\nThe number is perfect number.");
+        
+    }
+        else
+        {
+            printf("\nThe number is not perfect number.");
+            
+        }
+
+    return 0;
+}
